@@ -1,4 +1,5 @@
 SCIENTIFIC INITIATION - PIBIC/CNPq/UFOP
+
 Simulation of epidemiological models in temporal mobility networks
 Under the guidance of Prof. (a) VANDER LUIS DE SOUZA FREITAS, from the DEPARTMENT OF COMPUTATION, from UFOP.
 

@@ -56,6 +56,6 @@ Ouro Preto.
 
 <p style="text-align: center;">
   
-<em>AI MindJourney's reimagining of the transmission of COVID-19.</em>
+AI MindJourney's reimagining of the transmission of COVID-19.
   
 </p>

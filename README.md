@@ -54,8 +54,8 @@ Ouro Preto.
 
 ![COVID-19 SPREAD](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/MindJourney%20-%20COVID)
 
-<p style="text-align: center;">
+<center>
   
 AI MindJourney's reimagining of the transmission of COVID-19.
   
-</p>
+</center>

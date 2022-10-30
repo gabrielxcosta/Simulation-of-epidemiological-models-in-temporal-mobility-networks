@@ -1,6 +1,6 @@
 SCIENTIFIC INITIATION - PIBIC/CNPq/UFOP
 Simulation of epidemiological models in temporal mobility networks
-Under the guidance of Prof. (a) VANDERLUIS DE SOUZA FREITAS, from the DEPARTMENT OF COMPUTATION, from UFOP
+Under the guidance of Prof. (a) VANDER LUIS DE SOUZA FREITAS, from the DEPARTMENT OF COMPUTATION, from UFOP
 
 BRIEF:
 
@@ -51,3 +51,5 @@ compare with a dynamic in static mobility networks. The goals are specifications
 (6) Collaborate with the training of human resources specialized in this area of knowledge.
 (7) To favor the consolidation of the Intelligent Systems Computing Laboratory (CSILab) of the Federal University of 
 Ouro Preto.
+
+![COVID-19 SPREAD][https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/MindJourney%20-%20COVID]

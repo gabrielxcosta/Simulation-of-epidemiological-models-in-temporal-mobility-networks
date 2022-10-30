@@ -52,4 +52,4 @@ compare with a dynamic in static mobility networks. The goals are specifications
 (7) To favor the consolidation of the Intelligent Systems Computing Laboratory (CSILab) of the Federal University of 
 Ouro Preto.
 
-![COVID-19 SPREAD][https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/MindJourney%20-%20COVID]
+![COVID-19 SPREAD](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/MindJourney%20-%20COVID)

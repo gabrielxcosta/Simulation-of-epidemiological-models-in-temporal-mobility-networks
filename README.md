@@ -29,6 +29,6 @@ The general objective is to investigate a dynamic of epidemiological processes i
 (7) To favor the consolidation of the Intelligent Systems Computing Laboratory (CSILab) of the Federal University of 
 Ouro Preto.
 
-![COVID-19 SPREAD](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/MindJourney%20-%20COVID)
+![COVID-19 SPREAD](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/MidJourney%20-%20COVID)
 
 <p align="center"> AI MidJourney's reimagining of the transmission of COVID-19.

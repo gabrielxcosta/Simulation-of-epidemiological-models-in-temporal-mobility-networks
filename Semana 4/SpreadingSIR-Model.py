@@ -82,5 +82,5 @@ for iteration in iterations:
             color_map[index] = 'grey'
 
     nx.draw(g, positions, node_color=color_map, with_labels=True)
-    f.savefig(f'Timelapse/ Time {i} - Spreading a Virus - SIR.png', dpi=300)
+    f.savefig(f'Time_{i}.png', dpi=300)
     i += 1

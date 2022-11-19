@@ -57,4 +57,43 @@ The standard 78-edge network data set for Zachary's karate club is publicly avai
 [33 3] [33 9] [33 15] [33 16] [33 19] [33 21] [33 23] [33 24] [33 30] [33 31] [33 32]
 [34 9] [34 10] [34 14] [34 15] [34 16] [34 19] [34 20] [34 21] [34 23] [34 24] [34 27] [34 28] [34 29] [34 30] [34 31] [34 32] [34 33]
 ```
+
 ## Results
+
+### Nodes Degrees
+|Nodes  |Degrees|
+|-------|-------|
+|Node 0 |16     |
+|Node 1 |9      |
+|Node 2 |10     |
+|Node 3 |6      |
+|Node 4 |3      |
+|Node 5 |4      |
+|Node 6 |4      |
+|Node 7 |4      |
+|Node 8 |5      |
+|Node 9 |2      |
+|Node 10|3      |
+|Node 11|1      |
+|Node 12|2      |
+|Node 13|5      |
+|Node 14|2      |
+|Node 15|2      |
+|Node 16|2      |
+|Node 17|2      |
+|Node 18|2      |
+|Node 19|3      |
+|Node 20|2      |
+|Node 21|2      |
+|Node 22|2      |
+|Node 23|5      |
+|Node 24|3      |
+|Node 25|3      |
+|Node 26|2      |
+|Node 27|4      |
+|Node 28|3      |
+|Node 29|4      |
+|Node 30|4      |
+|Node 31|6      |
+|Node 32|12     |
+|Node 33|17     |

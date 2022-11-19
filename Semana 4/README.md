@@ -61,6 +61,7 @@ The standard 78-edge network data set for Zachary's karate club is publicly avai
 ## Results
 
 ### Nodes Degrees
+
 |Nodes  |Degrees|
 |-------|-------|
 |Node 0 |16     |
@@ -99,3 +100,5 @@ The standard 78-edge network data set for Zachary's karate club is publicly avai
 |Node 33|17     |
 
 ### Running the Simulation Picking One Random Initial Node
+
+![Simulation](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Templates/sir_spreading.gif?raw=true)

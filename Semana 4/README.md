@@ -7,7 +7,7 @@
 
 # Simulating a viral attack on a social network using the SIR epidemiological model
 
-Simulating a viral attack on a social network using the SIR epidemiological model. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club.
+The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club.
 
 S: The number of susceptible individuals. When a susceptible individual and an infectious individual come into "infectious contact", the susceptible individual contracts the disease and transitions into the infectious compartment. (Green nodes)
 

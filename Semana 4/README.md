@@ -97,3 +97,5 @@ The standard 78-edge network data set for Zachary's karate club is publicly avai
 |Node 31|6      |
 |Node 32|12     |
 |Node 33|17     |
+
+### Running the Simulation Picking One Random Initial Node

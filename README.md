@@ -6,7 +6,7 @@
 ---
 
 > SCIENTIFIC INITIATION - PIBIC/CNPq/UFOP
-> Under the guidance of Prof. (a) VANDER LUIS DE SOUZA FREITAS, from the DEPARTMENT OF COMPUTATION, from UFOP.
+> > Under the guidance of Prof. (a) VANDER LUIS DE SOUZA FREITAS, from the DEPARTMENT OF COMPUTATION, from UFOP.
 
 # BRIEF:
 

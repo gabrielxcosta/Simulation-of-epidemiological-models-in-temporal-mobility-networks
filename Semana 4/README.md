@@ -99,6 +99,8 @@ The standard 78-edge network data set for Zachary's karate club is publicly avai
 |Node 32|12     |
 |Node 33|17     |
 
-### Running the Simulation Picking One Random Initial Node
+### Running the 1st Simulation Picking One Random Initial Node
 
 ![Simulation](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Templates/sir_spreading.gif?raw=true)
+
+### Running the 2st Simulation Picking One Random Initial Node with SIR Model Chart

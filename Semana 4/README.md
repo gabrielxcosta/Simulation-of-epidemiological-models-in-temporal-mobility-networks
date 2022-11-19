@@ -9,7 +9,7 @@
 
 Zachary's karate club is a social network of a university karate club, described in the paper "An Information Flow Model for Conflict and Fission in Small Groups" by Wayne W. Zachary. The network became a popular example of community structure in networks after its use by Michelle Girvan and Mark Newman in 2002.
 
-[![Zachary's karate club]([https://en.wikipedia.org/wiki/Zachary%27s_karate_club](https://en.wikipedia.org/wiki/File:Zachary_karate_club_social_network.png))
+[![Zachary's karate club](https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Zachary_karate_club_social_network.png/1024px-Zachary_karate_club_social_network.png)
 
 ## Zachary's Methodology
 

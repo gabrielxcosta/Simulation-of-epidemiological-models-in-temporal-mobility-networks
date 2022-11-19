@@ -5,6 +5,16 @@
 
 ---
 
+# Simulating a viral attack on a social network using the SIR epidemiological model
+
+Simulating a viral attack on a social network using the SIR epidemiological model. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club.
+
+S: The number of susceptible individuals. When a susceptible individual and an infectious individual come into "infectious contact", the susceptible individual contracts the disease and transitions into the infectious compartment. (Green nodes)
+
+I: The number of infectious individuals. These are individuals who have been infected and are capable of infecting susceptible individuals. (Red nodes)
+
+A: The number of removed (and immune) or deceased individuals. These are individuals who have been infected and have recovered from the disease and either entered the removed compartment or died. It is assumed that the number of deaths is insignificant in relation to the total population. This compartment can also be called "recovered" or "resistant". (Gray nodes)
+
 ## Zachary's Karate Club Network
 
 Zachary's karate club is a social network of a university karate club, described in the paper "An Information Flow Model for Conflict and Fission in Small Groups" by Wayne W. Zachary. The network became a popular example of community structure in networks after its use by Michelle Girvan and Mark Newman in 2002.

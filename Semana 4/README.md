@@ -107,3 +107,4 @@ The standard 78-edge network data set for Zachary's karate club is publicly avai
 
 ![Simulation2](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Timelapse%202/sir_model_2.gif?raw=true)
 
+![Simulation2 - StaticChart](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Timelapse%202/SIR_In_Time.png?raw=true)

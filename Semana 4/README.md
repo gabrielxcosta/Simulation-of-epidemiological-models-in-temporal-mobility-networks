@@ -138,6 +138,68 @@ Before we dive into some community detection it is worth exploring the network w
 
 The first statistic we will look at is the density. This is a measure of how complete the graph is (how many edges are present in the network as compared to the total possible number of edges).
 
+```
+The edge density is: 0.13903743315508021
+```
+
+This value of ~0.14 is roughly in line with what we might expect for a social network.
+
+Next, let's look at the degree (how many edges each node has). This is a common centrality measure, which gives an idea of how 'imporant' each node is in the network. The assumption is that nodes with the most edges are the most important/central as they are directly connected to lots of other nodes. Nodes with a high centrality might be expected to play important roles in network. This is not the only way that centrality is measured in a graph and the interested reader is directed here.
+
+```
+The average degree is 4.588235294117647
+```
+
+
+```
+Text(0.5, 1.0, 'Karate Club: Node Degree')
+```
+![DegreeDistribution](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Karate_Club_Node_Degree.png)
+
+This distribution is similar to what we might expect given the visualisation of the graph. The majority of members of the club do not have very many links (most have 2 or 3 links) but a few nodes (which in our case correspond to Mr Hi and John A) have a lot of links.
+
+Another interesting statistic is the local clustering coefficient. You can find the full mathmatical definition here. The local clustering coefficient can be thought of as the average probability that a pair of node i’s friends are also friends with each other. In other words, it measures the extent to which any given node is located within a tight 'cluster' of neighbouring nodes.
+
+![Clustering_SIR](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Clustering_SIR.png?raw=true)
+
+The clustering coefficient has been the subject of a lot of interesting research. A low value of the clustering coefficient indicates the presence of a 'strucutral hole', i.e. a location in the network where there are links missing that would have otherwise been expected. Which typically indicates that a node is located on the outside of a cluster. It has been argued that individuals at strucutral holes in the network are more likely to come up with good ideas because, being at the edge of a tight cluster of nodes, they are exposed to a greater variety of different ideas from outside of that cluster (Burt, 2004).
+
+## Community Detection
+
+A key aspect of network analysis is community detection. In a social network this is the idea that a large network can be broken down into smaller communinities/cliques. For example, if the network represents the social relationships of all the students at a school, a community/clique would be a friendship group.
+
+The ability to detect communiites in networks has many applications. In the context of the karate club it will allow us to predict which members with side with Mr Hi and which will side with John A.
+
+There are many ways to approach community detection in networks. I am not going to go into the maths in too much detail but we are going to opt for a modularity optimisation method. Modularity is a measure of the extent to which like is connected to like in a network. The algorithm we will chose is already implemented for us in networkx, which makes its implementation very easy!
+
+```
+3
+```
+
+```
+[8, 14, 15, 18, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+[1, 2, 3, 7, 9, 12, 13, 17, 21]
+[0, 4, 5, 6, 10, 11, 16, 19]
+```
+
+We immediately see a couple of interesting things in these communities. For instance, Mr. Hi (node 0) and John A (node 33) are in different communities. Given the split in the club this is what we would have expected - buts it's good to have it confirmed!
+
+We can move on to visualise these different communities in the network. This will help to tell us how useful the communities we have detected really are. We are going to plot each communities in a different colour, and also include the label of which club each member ended up joining.
+
+![Communities_1](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Communities_1.png?raw=true)
+
+From this we notice that the communitites detected actually match our split between the 'Officer' (John A) and Mr. Hi quite closely. Let's combine communities 1 (red) and 2 (blue) and take another look.
+
+![Communities_2](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Communities_2.png?raw=true)
+ 
+ So, following the combination of those two communities we have split our network into two groups - the green group we predict to join John A's faction and the purple group Mr Hi's. Comparing to the club labels we see only one incorrect prediction in each group, meaning we have an accuracy of ~94%. Considering that that the analysis itself was straightforward to cary out, I'd say that is impressive!
+
+This demonstrates the exciting power of network analysis. The idea that we can develop a mathmatical framework that can predict an individuals choices based off of their relationships with others is immensely powerful. We live in an interconnected world and the study of networks allows us to explore those connections.
+ 
+## Wrap-Up
+
+Hopefully this has opened your eyes to the exciting world of networks! The uses of this type of analysis stretch far and wide, and are rapidly increasing in popularity. There are many different forms that network analysis can take, this article just scratches the surface. A whole host of different algorithms are implemented in networkx. You can open up this notebook in deepnote and have a play around building on the analysis already performed here!
+ 
 ## Results
 
 ### Nodes Degrees

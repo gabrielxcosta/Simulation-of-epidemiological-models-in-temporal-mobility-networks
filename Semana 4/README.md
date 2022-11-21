@@ -17,7 +17,13 @@ The network captures 34 members of a karate club, documenting links between pair
 
 ## Zachary's Karate Club Network
 
-Zachary's karate club is a social network of a university karate club, described in the paper "An Information Flow Model for Conflict and Fission in Small Groups" by Wayne W. Zachary. The network became a popular example of community structure in networks after its use by Michelle Girvan and Mark Newman in 2002.
+When it comes to social network anlaysis, Zachary's Karate Club (ZKC) is perhaps the most well known example. It was introduced by Wayne Zachary in this paper in 1977 and has been a popular example ever since.
+
+The network models the relationships between 34 members of a karate club: each node represents to an individual, and the links/edges represent individuals who interact outside of the karate club setting (e.g. spending social time together, like meeting up for a coffee, seperate to karate).
+
+The network has two main players the 'Officer' - John A (node 33) and the instructor - Mr. Hi (node 0). And the story goes that a rift occurred between Mr Hi and John A, causing the karate club to splinter into two new clubs (or factions). One club lead by John A and the other led by Mr Hi.
+
+One might expect that each member's decision to join either faction would be driven by their relationships with the other members of the club. So if we have a model of the relationships between the individuals (i.e. the network) we should be able to predict with faction each person will join. As you will see, network analysis gives us the power to do just that!
 
 ![Zachary's karate club](https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Zachary_karate_club_social_network.png/1024px-Zachary_karate_club_social_network.png)
 

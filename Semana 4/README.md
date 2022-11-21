@@ -120,6 +120,43 @@ matrix([[0., 1., 1., ..., 1., 0., 0.],
 
 ## Visualise the graph we have just imported
 
+| index | club_members |
+|-------|--------------|
+| 0     | Mr. Hi       |
+| 1     | Mr. Hi       |
+| 2     | Mr. Hi       |
+| 3     | Mr. Hi       |
+| 4     | Mr. Hi       |
+| 5     | Mr. Hi       |
+| 6     | Mr. Hi       |
+| 7     | Mr. Hi       |
+| 8     | Mr. Hi       |
+| 9     | Officer      |
+| 10    | Mr. Hi       |
+| 11    | Mr. Hi       |
+| 12    | Mr. Hi       |
+| 13    | Mr. Hi       |
+| 14    | Officer      |
+| 15    | Officer      |
+| 16    | Mr. Hi       |
+| 17    | Mr. Hi       |
+| 18    | Officer      |
+| 19    | Mr. Hi       |
+| 20    | Officer      |
+| 21    | Mr. Hi       |
+| 22    | Officer      |
+| 23    | Officer      |
+| 24    | Officer      |
+| 25    | Officer      |
+| 26    | Officer      |
+| 27    | Officer      |
+| 28    | Officer      |
+| 29    | Officer      |
+| 30    | Officer      |
+| 31    | Officer      |
+| 32    | Officer      |
+| 33    | Officer      |
+
 It becomes evident fairly quickly that the adjacency matrix is not the most intuitive way of visualising the karate club.
 
 There are many methods we can use to visualise a network and here I will just focus on the functions built into networkx. They are based off of matplotlib and don't provide us with the prettiest visualisations you have ever seen, but they'll do the job here. Look out for my next article where I will explore graph visualisations in more detail!

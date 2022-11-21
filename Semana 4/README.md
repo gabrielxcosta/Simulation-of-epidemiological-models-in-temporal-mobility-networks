@@ -64,6 +64,50 @@ The standard 78-edge network data set for Zachary's karate club is publicly avai
 [34 9] [34 10] [34 14] [34 15] [34 16] [34 19] [34 20] [34 21] [34 23] [34 24] [34 27] [34 28] [34 29] [34 30] [34 31] [34 32] [34 33]
 ```
 
+# Social Network Analysis
+
+## Import the ZKC graph
+
+Our first step is to import the ZKC graph. Thankfully, this is already included in networkx. We will create an instance of the graph and also retreive the club labels for each node. They tell us which faction of each member ends up siding with: Mr. Hi or the Officer (John A).
+
+```
+0 Mr. Hi
+1 Mr. Hi
+2 Mr. Hi
+3 Mr. Hi
+4 Mr. Hi
+5 Mr. Hi
+6 Mr. Hi
+7 Mr. Hi
+8 Mr. Hi
+9 Officer
+10 Mr. Hi
+11 Mr. Hi
+12 Mr. Hi
+13 Mr. Hi
+14 Officer
+15 Officer
+16 Mr. Hi
+17 Mr. Hi
+18 Officer
+19 Mr. Hi
+20 Officer
+21 Mr. Hi
+22 Officer
+23 Officer
+24 Officer
+...
+30 Officer
+31 Officer
+32 Officer
+33 Officer
+```
+So we see, as expected, the members of the club are split between Mr. Hi's faction and the Officer's faction.
+
+Mathmatically, a network is simply represented as an adjacency matrix, $A$. Each element of the matrix AijA_{ij}Aij​ represents the strength of the relationship between nodes i and j. Displaying AAA is one way for us to have a look at what is going on in the graph.
+
+As a note on some of the definitions in graph theory relevant here: the ZKC graph is both undirected and unweighted. This means that the edges in the graph have no associated direction (so AAA is symmetric) and that the edges take a binary value of either 1 or 0 (i.e. the members either have a relationship outside of the karate club or not).
+
 ## Results
 
 ### Nodes Degrees

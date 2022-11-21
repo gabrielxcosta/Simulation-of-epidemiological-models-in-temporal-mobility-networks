@@ -132,11 +132,11 @@ There are many methods we can use to visualise a network and here I will just fo
 
 ![ZKC_1](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/ZKC_1.png?raw=true)
 
-This is a lot more clear that the adjacency matrix! We quickly can see which members of the club are connected to eachother and we might even be able to draw a couple of quick initial conclusions. The first thing to note is that both Mr Hi and John A have the most connections in the graph (in other words they are the most central nodes). This is to be expected for the instructor and officer of the group. Given that we can see some nodes are connected to only one of Mr Hi or John A (but not the other) we could also start to make some educated guesses at which members will join each faction.
-
 **AFTER:**
 
 ![ZKC_2](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/ZKC_2.png?raw=true)
+
+This is a lot more clear that the adjacency matrix! We quickly can see which members of the club are connected to eachother and we might even be able to draw a couple of quick initial conclusions. The first thing to note is that both Mr Hi and John A have the most connections in the graph (in other words they are the most central nodes). This is to be expected for the instructor and officer of the group. Given that we can see some nodes are connected to only one of Mr Hi or John A (but not the other) we could also start to make some educated guesses at which members will join each faction.
 
 ## Network Statistics (Exploratory Analysis)
 

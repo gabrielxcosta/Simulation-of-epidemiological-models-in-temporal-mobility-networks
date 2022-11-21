@@ -108,6 +108,36 @@ Mathmatically, a network is simply represented as an adjacency matrix, $A$. Each
 
 As a note on some of the definitions in graph theory relevant here: the ZKC graph is both undirected and unweighted. This means that the edges in the graph have no associated direction (so AAA is symmetric) and that the edges take a binary value of either 1 or 0 (i.e. the members either have a relationship outside of the karate club or not).
 
+```
+matrix([[0., 1., 1., ..., 1., 0., 0.],
+        [1., 0., 1., ..., 0., 0., 0.],
+        [1., 1., 0., ..., 0., 1., 0.],
+        ...,
+        [1., 0., 0., ..., 0., 1., 1.],
+        [0., 0., 1., ..., 1., 0., 1.],
+        [0., 0., 0., ..., 1., 1., 0.]])
+```
+
+## Visualise the graph we have just imported
+
+It becomes evident fairly quickly that the adjacency matrix is not the most intuitive way of visualising the karate club.
+
+There are many methods we can use to visualise a network and here I will just focus on the functions built into networkx. They are based off of matplotlib and don't provide us with the prettiest visualisations you have ever seen, but they'll do the job here. Look out for my next article where I will explore graph visualisations in more detail!
+
+```
+<matplotlib.collections.PathCollection at 0x7f60ffe90f28>
+```
+
+![ZKC_1](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/ZKC_1.png?raw=true)
+
+This is a lot more clear that the adjacency matrix! We quickly can see which members of the club are connected to eachother and we might even be able to draw a couple of quick initial conclusions. The first thing to note is that both Mr Hi and John A have the most connections in the graph (in other words they are the most central nodes). This is to be expected for the instructor and officer of the group. Given that we can see some nodes are connected to only one of Mr Hi or John A (but not the other) we could also start to make some educated guesses at which members will join each faction.
+
+## Network Statistics (Exploratory Analysis)
+
+Before we dive into some community detection it is worth exploring the network we have in a bit more detail (this is essentially our exploratory analysis stage). For networks, we often want to retreive some common network statistics.
+
+The first statistic we will look at is the density. This is a measure of how complete the graph is (how many edges are present in the network as compared to the total possible number of edges).
+
 ## Results
 
 ### Nodes Degrees

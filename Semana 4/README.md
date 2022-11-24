@@ -294,6 +294,10 @@ Hopefully this has opened your eyes to the exciting world of networks! The uses 
 
 ### Running the 2st Simulation Picking One Random Initial Node with SIR Model Chart
 
+## $$\beta = 0.7$$
+
+## $$\gamma = 0.4$$
+
 ![Simulation2](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Timelapse%202/sir_model_2.gif?raw=true)
 
 ![Simulation2 - StaticChart](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Timelapse%202/SIR_In_Time.png?raw=true)

@@ -286,9 +286,9 @@ Hopefully this has opened your eyes to the exciting world of networks! The uses 
 
 ### Running the 1st Simulation Picking One Random Initial Node
 
-# $$\beta = 0.6$$
+## $$\beta = 0.6$$
 
-# $$\gamma = 0.4$$
+## $$\gamma = 0.4$$
 
 ![Simulation](https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/blob/main/Semana%204/Timelapse%201/sir_spreading.gif?raw=true)
 

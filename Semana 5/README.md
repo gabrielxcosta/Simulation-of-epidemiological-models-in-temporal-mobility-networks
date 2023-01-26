@@ -1,5 +1,9 @@
+<center>
+
 ## Epidemic dynamics on metapopulation networks
 
+ </center>
+ 
 Metapopulation models have been a powerful tool for both theorizing and simulating ``epidemic dynamics``. In
 a metapopulation model, one considers a network composed of subpopulations and their pairwise connections,
 and individuals are assumed to migrate from one subpopulation to another obeying a given mobility rule. While
@@ -101,8 +105,6 @@ $$
 \left ( \frac{m_{kj}}{N_k} \right ) I_k }{ \sum_{\substack{k=1\\k\neq i}}^N  
 \left ( \frac{m_{ki}}{N_k} \right ) N_k }
 - \gamma  I_i 
-
-$$
 
 $$
 

@@ -64,13 +64,11 @@ $$
 $$
 
 $$
-
 \frac{dS_i}{dt} = -\beta \sum_{\substack{j=1\\j\neq i}}^N  
 \left ( \frac{m_{ij}}{N_i} \right ) S_i 
 \frac{ \sum_{\substack{k=1\\k\neq i}}^N  
 \left ( \frac{m_{kj}}{N_k} \right ) I_k }{ \sum_{\substack{k=1\\k\neq i}}^N  
 \left ( \frac{m_{ki}}{N_k} \right ) N_k }
-
 $$
 
 ## Model for ODEINT - SIR Model for Metapopulation Networks 

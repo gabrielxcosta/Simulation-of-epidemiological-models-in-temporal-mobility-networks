@@ -80,7 +80,6 @@ $$
 \frac{ \sum_{\substack{k=1\\k\neq i}}^N  
 \left ( \frac{m_{kj}}{N_k} \right ) I_k }{ \sum_{\substack{k=1\\k\neq i}}^N  
 \left ( \frac{m_{ki}}{N_k} \right ) N_k }
-
 $$
 
 $$

@@ -1,8 +1,6 @@
-<center>
 
-## Epidemic dynamics on metapopulation networks
 
- </center>
+## <center> Epidemic dynamics on metapopulation networks </center>
  
 Metapopulation models have been a powerful tool for both theorizing and simulating ``epidemic dynamics``. In
 a metapopulation model, one considers a network composed of subpopulations and their pairwise connections,

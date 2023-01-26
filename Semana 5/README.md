@@ -1,6 +1,6 @@
 
 
-## <center> Epidemic dynamics on metapopulation networks </center>
+## Epidemic dynamics on metapopulation networks
  
 Metapopulation models have been a powerful tool for both theorizing and simulating ``epidemic dynamics``. In
 a metapopulation model, one considers a network composed of subpopulations and their pairwise connections,
@@ -43,43 +43,33 @@ $$P_{ij} = \frac{m_{ij}}{\sum_{j=1}^{M} m_{ij}}$$
 
 $$
 
-\begin{equation} 
-\begin{aligned} 
 \frac{dS_i}{dt} = - \beta \frac{m_{ii}}{N_i} S_i 
 \frac{ \left ( \frac{ m_{ii} }{ N_i } \right ) I_i}{ 
 \left ( \frac{ m_{ii} }{ N_i } \right ) N_i }, \;\; j=i, k=j=i
-\end{aligned} 
-\end{equation}
-\\
 
-\begin{equation} 
-\begin{aligned} 
+$$
+
+$$ 
 \frac{dS_i}{dt} = - \beta \frac{m_{ii}}{N_i} S_i
 \frac{ \sum_{ \substack{k=1\\k\neq i}}^N  \left ( \frac{ m_{ki} }{ N_k } \right ) I_k}{ 
  \sum_{ \substack{k=1\\k\neq i}}^N \left ( \frac{ m_{ki} }{ N_k } \right ) N_k }, \;\; j=i
-\end{aligned} 
-\end{equation}
 
-\\
+$$
 
-\begin{equation} 
-\begin{aligned} 
+$$
+
 \frac{dS_i}{dt} = - \beta \sum_{ \substack{j=1\\j\neq i}}^N \left ( \frac{m_{ij}}{N_i} \right ) S_i \frac{ \left ( \frac{ m_{ij} }{ N_i } \right ) I_i}{ 
 \left ( \frac{ m_{ij} }{ N_i } \right ) N_i }, \;\; k=i
-\end{aligned} 
-\end{equation}
 
-\\
+$$
 
-\begin{equation} 
-\begin{aligned}
-\frac{dS_i}{dt} &= -\beta \sum_{\substack{j=1\\j\neq i}}^N  
+$$
+
+\frac{dS_i}{dt} = -\beta \sum_{\substack{j=1\\j\neq i}}^N  
 \left ( \frac{m_{ij}}{N_i} \right ) S_i 
 \frac{ \sum_{\substack{k=1\\k\neq i}}^N  
 \left ( \frac{m_{kj}}{N_k} \right ) I_k }{ \sum_{\substack{k=1\\k\neq i}}^N  
 \left ( \frac{m_{ki}}{N_k} \right ) N_k }
-\end{aligned} 
-\end{equation}
 
 $$
 

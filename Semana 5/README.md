@@ -15,8 +15,8 @@ In order to understand the geographical diffusion of diseases, one has to combin
 
 ## Metapopulation SIR model - Considering flows of people between populations
 
-<center>
+<p align="center">
 
 ![MetapopSIR](MetaSIR2.jpeg)
 
-</center>
+</p>

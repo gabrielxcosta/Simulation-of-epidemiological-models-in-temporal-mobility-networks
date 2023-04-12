@@ -14,6 +14,16 @@ $$\frac{dN_{i}}{dt} = -\sum_{j=1}^{K} f_{i, j} N_{i} + \sum_{j=1}^{K} f_{j, i} N
 
 where $N_{i}$ counts the number of hosts currently located at site $i$, and $K$ is the total number of populations. The constant $f_{i, j}$ represents the rate at which hosts located at $i$ travel to $j$, where $f_{i, i}$ for all $i$. The fully specified Flux model requires K(K - 1) parameters.
 
+## SIR Model
+
+Combining the basic SIR model with the Flux movement model, we obtain an analogous set of $3K$ equations:
+
+$$\frac{dS_{i}}{dt} = -\beta_{i} \frac{S_{i}I_{i}}{N_{i}} -\sum_{j=1}^{K} f_{i, j} S_{i} + \sum_{j=1}^{K} f_{j, i} S_{j}$$
+
+$$\frac{dI_{i}}{dt} = \beta_{i} \frac{S_{i}I_{i}}{N_{i}} - \gamma I_{i} -\sum_{j=1}^{K} f_{i, j} I_{i} + \sum_{j=1}^{K} f_{j, i} I_{j}$$
+
+$$\frac{dR_{i}}{dt} = \gamma I_{i} -\sum_{j=1}^{K} f_{i, j} R_{i} + \sum_{j=1}^{K} f_{j, i} R_{j}$$
+
 ## Usage
 
 The project is implemented in Python, and the code is available in the ``metaSIR.py`` file. The project can be used to simulate disease transmission in a network of geographically isolated populations by initializing the necessary parameters and running the simulation.

@@ -12,7 +12,7 @@ The Flux model is a **Eulerian movement model** that describes hosts as diffusin
 
 $$\frac{dN_{i}}{dt} = -\sum_{j=1}^{K} f_{i, j} N_{i} + \sum_{j=1}^{K} f_{j, i} N_{j}$$ 
 
-The total number of hosts remains constant over time:
+**The total number of hosts remains constant over time:**
 
 $$N = \sum_{i=1}^{K} N_{i}$$
 

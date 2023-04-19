@@ -20,7 +20,7 @@ where $N_{i}$ counts the number of hosts currently located at site $i$, and $K$ 
 
 Rearranging the equations above:
 
-$$\frac{dN}{dt} = \sum_{i=1}^{K} \frac{dN_{i}}{dt} = \sum_{i=1}^{K} (- \sum_{j=1}^{K} f_{i, j} N_{i} + \sum_{j=1}^{K} f_{j, i} N_{j})$$
+$$\frac{dN}{dt} = \sum_{i=1}^{K} \frac{dN_{i}}{dt} = \sum_{i=1}^{K} \left(- \sum_{j=1}^{K} f_{i, j} N_{i} + \sum_{j=1}^{K} f_{j, i} N_{j} \right)$$
 
 ## SIR Model
 

@@ -12,7 +12,7 @@ The Flux model is a **Eulerian movement model** that describes hosts as diffusin
 
 $$\frac{dN_{i}}{dt} = -\sum_{j=1}^{K} f_{i, j} N_{i} + \sum_{j=1}^{K} f_{j, i} N_{j}$$ 
 
-where $N_{i}$ counts the number of hosts currently located at site $i$, and $K$ is the total number of populations. The constant $f_{i, j}$ represents the rate at which hosts located at $i$ travel to $j$, where $f_{i, i}$ for all $i$. The fully specified Flux model requires $K(K - 1)$ parameters.
+where $N_{i}$ counts the number of hosts currently located at site $i$, and $K$ is the total number of populations. The total number of hosts remains constant over time ($N = \sum_{i=1}^{K} N_{i}$). The constant $f_{i, j}$ represents the rate at which hosts located at $i$ travel to $j$, where $f_{i, i}$ for all $i$. The fully specified Flux model requires $K(K - 1)$ parameters.
 
 ## SIR Model
 

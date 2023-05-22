@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="430px" height="195px" viewBox="0 0 430 195" enable-background="new 0 0 430 195" xml:space="preserve">
+<symbol  id="New_Symbol" viewBox="-15.052 -15.052 30.103 30.103">
+	<radialGradient id="path5436_1_" cx="4.25" cy="-4.25" r="14.5" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#1E71FF"/>
+		<stop  offset="1" style="stop-color:#679FFF"/>
+	</radialGradient>
+	<path id="path5436_3_" fill="url(#path5436_1_)" stroke="#000000" stroke-width="1.1034" d="M14.5,0c0-8.008-6.492-14.5-14.5-14.5S-14.5-8.008-14.5,0S-8.008,14.5,0,14.5S14.5,8.008,14.5,0z"/>
+</symbol>
+<path id="path5464" fill="none" stroke="#000000" d="M92.5,71.567l-55,34.294"/>
+<path id="path5466" fill="none" stroke="#000000" d="M37.5,127.715l36,30"/>
+<path id="path5468" fill="none" stroke="#000000" d="M91.139,155.215l13.723-78"/>
+<path id="path5470" fill="none" stroke="#000000" d="M99.345,155.215l85.311-118"/>
+<path id="path5472" fill="none" stroke="#000000" d="M119.688,77.215l53.625,66"/>
+<path id="path5474" fill="none" stroke="#000000" d="M200.5,144.753l48-43.076"/>
+<path id="path5476" fill="none" stroke="#000000" d="M248.5,73.655l-38-36.882"/>
+<path id="path5478" fill="none" stroke="#000000" d="M210.5,22.695l95,3.04"/>
+<path id="path5480" fill="none" stroke="#000000" d="M335.5,34.862l55,31.705"/>
+<path id="path5482" fill="none" stroke="#000000" d="M407.025,90.215l2.948,29"/>
+<path id="path5484" fill="none" stroke="#000000" d="M396.5,134.73l-28,0.967"/>
+<path id="path5486" fill="none" stroke="#000000" d="M366.287,121.215l26.426-31"/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" id="XMLID_1_" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 195.4995 22.2153)" overflow="visible"/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 320.5 26.2153)" overflow="visible" enable-background="new    "/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 22.4995 115.2148)" overflow="visible" enable-background="new    "/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 107.4995 62.2153)" overflow="visible" enable-background="new    "/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 263.5 88.2153)" overflow="visible" enable-background="new    "/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 88.4995 170.2148)" overflow="visible" enable-background="new    "/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 353.5 136.2148)" overflow="visible" enable-background="new    "/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 185.4995 158.2148)" overflow="visible" enable-background="new    "/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 411.5 134.2148)" overflow="visible" enable-background="new    "/>
+<use xlink:href="#New_Symbol"  width="30.103" height="30.103" x="-15.052" y="-15.052" transform="matrix(1 0 0 -1 405.5 75.2153)" overflow="visible" enable-background="new    "/>
+<text transform="matrix(1 0 0 1 152 63.5645)" font-family="Liberation Sans" font-size="17">1</text>
+<text transform="matrix(1 0 0 1 160 123.2148)" font-family="Liberation Sans" font-size="17">1</text>
+<text transform="matrix(1 0 0 1 263.5 19.0645)" font-family="Liberation Sans" font-size="17">1</text>
+<text transform="matrix(1 0 0 1 84 119.7148)" font-family="Liberation Sans" font-size="17">2</text>
+<text transform="matrix(1 0 0 1 240.5 57.2148)" font-family="Liberation Sans" font-size="17">2</text>
+<text transform="matrix(1 0 0 1 414.499 112.2129)" font-family="Liberation Sans" font-size="17">2</text>
+<text transform="matrix(1 0 0 1 369.501 50.7148)" font-family="Liberation Sans" font-size="17">3</text>
+<text transform="matrix(1 0 0 1 369.501 105.8623)" font-family="Liberation Sans" font-size="17">3</text>
+<text transform="matrix(1 0 0 1 51.5 85.7148)" font-family="Liberation Sans" font-size="17">4</text>
+<text transform="matrix(1 0 0 1 41.5 158.2148)" font-family="Liberation Sans" font-size="17">4</text>
+<text transform="matrix(1 0 0 1 220 117.2158)" font-family="Liberation Sans" font-size="17">4</text>
+<text transform="matrix(1 0 0 1 379.5 157.2148)" font-family="Liberation Sans" font-size="17">4</text>
+</svg>

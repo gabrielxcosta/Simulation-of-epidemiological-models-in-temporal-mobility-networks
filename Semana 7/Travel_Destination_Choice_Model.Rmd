@@ -1,0 +1,109 @@
+---
+title: "Travel Destination Choice Model"
+output: pdf_document
+---
+
+```{r Libraries, message = FALSE, warning=FALSE, quietly = TRUE}
+library(data.table)
+library(ggplot2)
+library(MASS)
+library(tidyverse, quietly = TRUE)
+library(nnet)
+# get rid of this
+library(rgdal)
+```
+
+# Introduction
+This document shows how the multinomial destination choice model was developed for the analysis presented in the article "Comparing Metapopulation Dynamics of Infectious Diseases under Different Models of Human Movement" by Citron et al. 
+
+We will use data from the 2015-2017 BIMEP malaria indicator surveys which record how many people reported going from their homes to each of seven destination regions. We will use these data, along with population, distance, and location covariates to fit a multinomial probability model of destination choice. The results appear as the columns `p_mainland`, `p_baney`, etc in Comparing_Metapopulation_Dynamics_companion_code.Rmd.
+
+# Load data
+The columns in this data set are as follows:
+
+  * area_index: Unique label for each map area
+  * lon/lat: Longitude and latitude for each map area
+  * region: Region where each map area is located. The map areas Malabo region have been categorized as either in urban Malabo ("Malabo") or in the periurban areas around the city ("Periurban"). The other map area regions are Baney, Luba, Moka, Riaba, and Ureka.
+  * population: Number of residents for each map area
+  * sample_size: Number of people sampled from each map area in each MIS
+  * t_eg, ti_ban, etc: Reported numbers trips to mainland Equatorial Guinea (eg); Baney (ban); Luba (lub), Malabo (mal), Moka (mok), Riaba (ria), and Ureka (ure)
+  * dist_eg, dist_ban, etc: Distance to each destination region. This is computed as the distance to the centroids of each of the destination regions, calculated from the lon/lat coordinates.
+  * year: Year of the study
+```{r Load data}
+mul_model_data <- fread("Dataset_S1_raw_survey_data.csv")
+```
+
+We will fit a multinomial model of destination choice to the data. We first have to transform the data to apply the `nnet::multinom`. We have to create a second data set to also perform the prediction. Much of the operations below have to do with that. The results appear as the columns `p_mainland`, `p_baney`, etc in Comparing_Metapopulation_Dynamics_companion_code.Rmd.
+```{r Transform data}
+# Create a dummy table, which says how many trips were reported to each destination region
+dummy_1 <- melt(mul_model_data,
+                 id.vars = c("area_index", "population", "year", "region", 
+                             "dist_eg", "dist_ban", "dist_lub", 
+                             "dist_mal", "dist_mok", "dist_ria", "dist_ure"),
+                 measure.vars = list(c("t_eg", "ti_ban", "ti_lub", "ti_mal", 
+                                       "ti_mok", "ti_ria", "ti_ure")),
+                 value.name = c("counts"),
+                 variable.name = "dest_reg")
+
+# Create another dummy table, with the populations of the destination regions
+dummy_2 <- data.table(
+        dest_reg = c("t_eg", "ti_ban", "ti_lub", "ti_mal",  "ti_ria", "ti_mok", "ti_ure"),
+        dest_pop = c(1071785, # this is the off-island population of equatorial guinea
+          round(sum(mul_model_data[region == "Baney"]$pop)/4), 
+          round(sum(mul_model_data[region == "Luba"]$pop)/4),
+          round(sum(mul_model_data[region %in% c("Malabo", "Peri")]$pop)/4),
+          round(sum(mul_model_data[region == "Moka"]$pop)/4),
+          round(sum(mul_model_data[region == "Riaba"]$pop)/4),
+          round(sum(mul_model_data[region == "Ureka"]$pop)/4)
+          )  
+        )
+dummy_1 <- merge(dummy_1, dummy_2, by = "dest_reg")
+
+# Create dummy variable for location
+dummy_3 <- dcast(mul_model_data, area_index ~ region, 
+                 fun.aggregate = function(region){return(as.numeric(length(region)>0))}, 
+                 value.var = "region")
+
+# Merge the two tables to create a new table which we will use 
+# to retrieve model predictions later
+multinom_data_predict <- merge(dummy_1, dummy_3, by = "area_index")
+
+
+# To perform the model fit, we explode out the rows of multinom_data_predict
+# such that each row corresponds to one reported trip to one destination
+multinom_data_fit <- multinom_data_predict[counts > 0]
+multinom_data_fit <- multinom_data_fit[rep(seq(1, nrow(multinom_data_fit)),
+                                           multinom_data_fit$counts)]
+```
+
+Perform the model fit using `nnet::multinom`. We fit the probability of choosing a destination (dest_reg) vs. the region of origin, population at the area of origin, and distance to each of the destination regions.
+```{r Perform Model Fit, message=FALSE, quietly = TRUE}
+mul_model <- nnet::multinom(
+  dest_reg ~ population + 
+  # distance covariates
+  dist_eg + dist_ban + dist_lub + dist_mal + 
+  dist_mok + dist_ria + dist_ure + 
+  # indicator variables for region of origin
+  Baney + Luba + Malabo + Moka + Periurban + Riaba + Ureka, 
+  data = multinom_data_fit, 
+  maxit = 1000)
+
+# Extract Predictions
+mul_predict <- predict(mul_model,
+                       # newdata = holder.1[ix == "to"],
+                       multinom_data_predict[dest_reg == "t_eg"],
+                       type = "probs") # note that everything row does sum to 1
+mul_predict <- as.data.table(mul_predict)
+mul_predict$area_index <- multinom_data_predict[dest_reg == "t_eg"]$area_index
+mul_predict$year <- multinom_data_predict[dest_reg == "t_eg"]$year
+```
+
+The table of destination probability distributions that is used in the accompanying documents and manuscript is the one from 2015 (and 2016 and 2017, they should be the same).
+```{r }
+head(mul_predict[year == 2015,
+                 .(area_index, 
+                   p_mainland = t_eg, p_baney = ti_ban, p_luba = ti_lub,
+                   p_malabo = ti_mal, p_moka = ti_mok, p_riaba = ti_ria, 
+                   p_ureka = ti_ure, year)])
+```
+

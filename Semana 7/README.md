@@ -10,7 +10,11 @@ Each population $i$ contains $N_{i}$ hosts. Disease transmission is assumed to b
 
 The Flux model is a **Eulerian movement model** that describes hosts as diffusing from one metapopulation to another. The following differential equation represents the model:
 
-$$\frac{dN_{i}}{dt} = -\sum_{j=1}^{K} f_{i, j} N_{i} + \sum_{j=1}^{K} f_{j, i} N_{j}$$ 
+\begin{center}
+\begin{equation}
+    \frac{dN_{i}}{dt} = -\sum_{j=1}^{K} f_{i, j} N_{i} + \sum_{j=1}^{K} f_{j, i} N_{j},
+\end{equation}
+\end{center}
 
 **The total number of hosts remains constant over time:**
 

@@ -1,0 +1,299 @@
+\documentclass[
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão somente em um lado da folha.
+%	twoside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+%	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2temp} % classe abntex2ufop para escrita de trabalhos academicos
+
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{float}
+%\usepackage{lmodern}			% Usa a fonte Latin Modern	
+\usepackage{times}				% Usa a fonte Latin Modern	
+\usepackage{fancyvrb}			% Para mudança de fonte ambiente verbatim
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontfamily=zi4}
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{supertabular}       % tabela na capa do documento
+% ---
+		
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2 - pode ser removido
+
+% ---
+% Pacotes adicionais, usados no anexo do modelo de folha de identificação
+% ---
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibliografia
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT 6023
+
+% ----
+\usepackage{amsmath} % mathematical features
+\usepackage{amssymb}
+% ----
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Simulação de modelos epidemiológicos em redes de mobilidade temporais}
+\autor{Gabriel Ferreira da Costa}
+\local{Ouro Preto - Minas Gerais - Brasil}
+\data{Setembro de 2023}
+\orientador{Prof. Dr. Vander Luis de Souza Freitas}
+\instituicao{Universidade Federal de Ouro Preto}
+\unidade{Departamento de Computação}
+\tipotrabalho{Relatório final do projeto de iniciação científica\\EDITAL 04/2022 PIBIC/CNPQ-2022/23\\Vigência: 01/09/2022 a 31/08/2023}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+%\preambulo{}
+% ---
+
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{hexagram}{RGB}{2, 235, 239}
+\definecolor{hexagram1}{RGB}{255, 0, 0}
+\definecolor{hexagram2}{RGB}{106, 188, 68}
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+% ------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ------------------------------------------
+% \pretextual
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+%\imprimirfolhaderosto*
+% ---
+% RESUMOS
+% ---
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+ \noindent O presente projeto tem por objetivo simular modelos epidemiológicos em redes de mobilidade temporais. Busca-se comparar os resultados obtidos a partir de redes dinâmicas e versões estáticas. A segunda estratégia é comumente utilizada, partindo da agregação dos estados da rede em vários instantes de tempo, dentro de uma janela temporal - uma simplificação dos fluxos de pessoas entre localidades. Entretanto, ter disponível os estados da rede em diferentes instantes de tempo é útil para a obtenção de resultados parciais mais fidedignos, isto é, números de casos confirmados, pessoas infectadas, mortes, etc., mais acurados durante a simulação. Alguns pontos que serão investigados no presente projeto são: a quantificação das diferenças entre a dinâmica simulada na rede temporal e sua versão estática; qual a tolerância na alteração da escala temporal da rede em relação à sua versão mais refinada, ou seja, verificar se é possível agregar alguns estados da rede e ainda assim obter os mesmo resultados e; investigar as correspondências entre as mudanças na dinâmica com as mudanças topológicas da rede, no tempo.
+
+ \textbf{Palavras-chave}: Redes complexas, redes de mobilidade, redes temporais, redes dinâmicas, epidemiologia.
+\end{resumo}
+
+%O uso de séries temporais está presente em diversas áreas da ciência, sejam elas naturais, humanas, exatas ou biológicas. A análise dessas séries, portanto, se faz necessária, assim como o desenvolvimento de diversas ferramentas para tal propósito. Modelos matemáticos e estatísticos estão sempre presentes na representação da dinâmica de uma série temporal, mas novas abordagens estão obtendo êxito nesse fim. A incorporação da teoria dos grafos na análise da dinâmica de séries temporais vem sendo usada recentemente na literatura; séries são convertidas em redes compostas por nós e arestas, que por sua vez são analisadas usando o ferramental presente no estudo dos grafos.
+
+% resumo em inglês
+%\begin{resumo}[Abstract]
+% \begin{otherlanguage*}{english}
+
+%\noindent This is the english abstract.
+
+%   \vspace{\onelineskip}
+ 
+%   \noindent 
+%   \textbf{Key-words}: word1. word2. word3.
+% \end{otherlanguage*}
+%\end{resumo}
+
+% ---
+% inserir lista de figuras
+% ---
+%\pdfbookmark[0]{\listfigurename}{lof}
+%\listoffigures*
+%\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+%\pdfbookmark[0]{\listtablename}{lot}
+%\listoftables*
+%\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+%\begin{siglas}
+%  \item[ABNT] Associação Brasileira de Normas %Técnicas
+%  \item[abnTeX] ABsurdas Normas para TeX
+%\end{siglas}
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+% ------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ------------------------------------------
+\textual
+\pagestyle{simple}
+
+% ---
+% Capítulos
+% ---
+\include{capitulos/introducao}
+\include{capitulos/objetivos}
+\include{capitulos/revisao}
+\include{capitulos/trabalhos}
+\include{capitulos/metodologia}
+\include{capitulos/resultados}
+\include{capitulos/conclusao}
+\include{capitulos/producao}
+% ELEMENTOS PÓS-TEXTUAIS
+% ---------------------------------
+\postextual
+% ---------------------------------
+
+% Referências
+% ---------------------------------
+\bibliography{abntex2-modelo-references}
+% ---------------------------------
+
+% Glossário
+% ---------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+%(Lembre-se: Apendices são de autoria do próprio autor do texto. 
+% Anexos são elementos de autorias de outros, que o autor do texto julga interessante apresentar)
+% ---
+% Inicia os apêndices: 
+% ---
+%\begin{apendicesenv}
+
+% Insere arquivo com os apendices A e B
+%\include{capitulos/Apendices}
+%\end{apendicesenv}
+% ---
+
+% ------------------------------------------
+% Anexos
+% ------------------------------------------
+%(Lembre-se: Apendices são de autoria do próprio autor do texto. 
+% Anexos são elementos de autorias de outros, que o autor do texto julga interessante apresentar)
+% ---
+% Inicia os anexos
+% ---
+%\begin{anexosenv}
+
+% Insere arquivo com os anexos 1, 2 e 3
+%\include{capitulos/Anexos}
+% ---
+%\end{anexosenv}
+
+%----------------------------------
+% INDICE REMISSIVO
+%----------------------------------
+%\phantompart
+\printindex
+%----------------------------------
+
+\end{document}

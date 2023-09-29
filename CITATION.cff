@@ -1,0 +1,42 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Simulation of epidemiological models in temporal mobility
+  networks
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Gabriel F. Costa
+    email: gabriel.fc@aluno.ufop.edu.br
+    affiliation: Federal University of Ouro Preto (UFOP)
+repository-code: >-
+  https://github.com/gabrielxcosta/Simulation-of-epidemiological-models-in-temporal-mobility-networks/tree/main
+abstract: >-
+  This project aims to simulate epidemiological models in
+  temporal mobility networks. We seek to compare the results
+  obtained from dynamic networks and static versions. A
+  second strategy is commonly used, starting from the
+  aggregation of the network states in several instants of
+  time, within a temporal one - a simplification of the
+  flows of people between locations. However, having the
+  status of the network available at different times,
+  reliable, with more partial results, numbers of confirmed
+  cases, deaths, etc. accurate during a simulation. Some
+  points that will be investigated in this project are: the
+  quantification of the differences between a simulated
+  dynamics in the temporal network and its static version;
+  what is the difference in the distinction of the time
+  scale of the network in relation to its more refined
+  version, or to verify if it is possible to aggregate some
+  states of the network and still obtain the same results
+  and investigate the correspondences between the changes in
+  the dynamics with the topological changes of the network,
+  in time.
+keywords:
+  - Complex networks
+  - Temporal Networks
+  - Mobility Data

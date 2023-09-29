@@ -1,0 +1,10 @@
+\chapter[Introdução]{Introdução}
+Uma rede complexa é um grafo composto por vértices, representando entidades que compõem o sistema complexo em estudo, e arestas, as quais capturam as interações entre eles. Exemplos são redes de mobilidade, a Internet e redes sociais \cite{BOCCALETTI2006, barabasi2016network}.
+
+Uma importante característica de redes reais é sua evolução no tempo \cite{Kim2012, Masuda2021}. Há diversas formas de representação de redes temporais, como as redes agregadas e os grafos de eventos, transmissão, alcançabilidade e afins \cite{Sano2021}. Métricas comuns, como grau e betweenness, devem ser adaptadas a depender do tipo de representação, pois as noções de conectividade e caminho mínimo são, nesses casos, atreladas ao tempo. 
+
+Redes de mobilidade são caracterizadas por nós que representam localidades e links que denotam o fluxo de pessoas entre um nó e outro, em uma dada janela de tempo \cite{Lamosa2021}. No caso específico dessas redes, algumas bases de dados disponibilizam dados estáticos com uma ou mais camadas \cite{Cavararo2017, 50OD} e outras com camadas e componente temporal \cite{Gallotti_2015}. Processos epidemiológicos, por exemplo, podem ser simulados com
+maior riqueza de detalhes quanto mais completa for a representação da rede. 
+
+Este projeto busca investigar: a quantificação das diferenças entre a dinâmica simulada na rede temporal e sua versão estática; qual a tolerância na alteração da escala temporal da rede em relação à sua versão mais refinada, ou seja, verificar se é possível agregar alguns estados da rede e ainda assim obter os mesmo resultados e; as correspondências entre as mudanças na dinâmica com as mudanças topológicas da rede, no tempo. Neste projeto, foi utilizado o modelo compartimental SIR, com metapopulações \cite{Kermack1927, Harko2014}, para simulação de epidemias.
+
